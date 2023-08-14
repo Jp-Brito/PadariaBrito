@@ -1,0 +1,152 @@
+.Content {
+  display: flex;
+  /* flex-direction: row; */
+  gap: 0 20px;
+}
+
+.store {
+  flex-basis: 67%;
+  /* border: 2px solid rgb(0, 255, 76); */
+  padding: 0 10px 0 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  border: 1px solid transparent;
+  /* flex-direction: row; */
+}
+
+.header h3 {
+  font-size: var(--h3FontSize);
+  border: 1px solid transparent;
+}
+
+.headerarrow {
+  gap: 10px;
+  display: flex;
+}
+
+.headerarrow p {
+  color: var(--textColor);
+  font-size: var(--smallFontSize);
+}
+
+.listitem {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  overflow-y: scroll;
+  gap: 10px;
+  max-height: 45vh;
+}
+
+.listitem::-webkit-scrollbar {
+  width: 5px;
+}
+
+.listitem::-webkit-scrollbar-thumb {
+  background: var(--HoverColor);
+  border-left: 1px solid #faf6ed;
+  border-right: 1px solid #faf6ed;
+}
+
+.listitem::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+.item {
+  position: relative;
+  width: 150px;
+  height: 170px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: var(--itemCardColor);
+  box-shadow: rgba(149, 157, 165, .2) 0px 8px 24px;
+  overflow: hidden;
+  top: 20px;
+}
+
+.item:hover {
+  background-color: var(--itemCardHover);
+  box-shadow: 0 2px 2px var(--inputColor)
+}
+
+.icon {
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  color: var(--PrimaryColor);
+  /* background-color: var(--PrimaryColor); */
+}
+
+.item img {
+  width: 120px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.item h3 {
+  color: black;
+  font-size: var(--normalFontSize);
+}
+
+.log {
+  flex-basis: 100%;
+  margin-right: 1rem;
+}
+
+.logContent {
+  background-color: var(--whiteColor);
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px 5px;
+  border-radius: 20px;
+  max-height: 42vh;
+  overflow-y: scroll;
+}
+
+.logContent::-webkit-scrollbar {
+  width: 0px;
+}
+
+.logActivity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.logActivity img {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px var(--itemCardColor);
+}
+
+.logActivity span {
+  font-size: var(--normalFontSize);
+  font-weight: 600;
+}
+
+.logActivity p,
+small {
+  font-size: var(--smallFontSize);
+  color: var(--textColor);
+}
+
+.logActivity div {
+  align-items: start;
+  display: flex;
+  flex-direction: column;
+}
+
+.primary:hover {
+  color: var(--HoverColor);
+}

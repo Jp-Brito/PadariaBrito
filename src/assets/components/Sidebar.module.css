@@ -1,0 +1,100 @@
+.sidebar {
+  background-color: var(--whiteColor);
+  border-radius: 10px 0px 0px 10px;
+  height: 98vh;
+  box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.151);
+
+  grid-row: 1/5;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 0px;
+}
+
+.logoDiv {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 1.5rem;
+}
+
+.logoDiv a img {
+  max-width: 45px;
+}
+
+.logoDiv h1 {
+  font-size: 1.5rem;
+  color: var(--PrimaryColor);
+}
+
+.QuickMenu {
+  margin: 30px 0px 0px 20px;
+  font-size: 0.8rem;
+}
+
+.QuickMenu h3 {
+  font-size: var(--smallFontSize);
+}
+
+.QuickMenuLi {
+  margin: 20px 0 30px 0;
+  display: grid;
+  gap: 1rem;
+  color: var(--textColor);
+}
+
+.help {
+  background-color: var(--HoverColor);
+  border-radius: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: var(--whiteColor);
+  gap: px;
+  font-size: 0.8rem;
+  padding: 5px 0 0px 0;
+  /* padding: 1rem; */
+  /* overflow-y: scroll; */
+}
+
+.help h4 {
+  font-size: .8rem;
+  margin-top: .5rem;
+  font-weight: 800;
+  color: var(--whiteColor)
+}
+
+.help p {
+  font-size: .7rem;
+  padding-bottom: 1rem;
+  font-weight: 500;
+  color: var(--whiteColor);
+}
+
+.help button {
+  padding: 10px 15px 10px 15px;
+  border-radius: 10px;
+  border-color: transparent;
+}
+
+.outline {
+  --c: #bb257a;
+  --s: .15em;
+
+  line-height: 1.1em;
+  padding-bottom: calc(2.1*var(--s));
+  background:
+    conic-gradient(from 135deg at top, var(--c) 90deg, #0000 0) left 0 bottom var(--s)/calc(2*var(--s)) var(--s) repeat-x,
+    conic-gradient(from -45deg at bottom, var(--c) 90deg, #0000 0) left var(--s) bottom 0/calc(2*var(--s)) var(--s) repeat-x;
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0) 0/var(--_p, 0%) padding-box no-repeat;
+  transition: .5s;
+}
+
+.outline:hover {
+  --_p: 100%;
+  color: var(--c);
+}

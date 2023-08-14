@@ -1,0 +1,99 @@
+.header {
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-radius: 5px;
+  padding: 15px 0 0 0px;
+}
+
+.header h1 {
+  color: var(--PrimaryColor);
+  font-size: var(--h1FontSize);
+}
+
+.header p {
+  color: var(--textColor);
+  font-size: var(--normalFontSize);
+}
+
+.headerBusca {
+  background-color: var(--inputColor);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  padding: 15px 20px;
+  color: var(--textColor);
+  box-shadow: 0 2px 4px var(--inputColor)
+}
+
+.headerBusca input {
+  border: none;
+  background-color: transparent;
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+
+.headertips {
+  display: flex;
+  gap: 15px;
+}
+
+.headerIcon {
+  border: 3px solid var(--whiteColor);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--whiteColor);
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 2px 4px var(--inputColor)
+}
+
+.ImgProfile img {
+  border: 3px solid var(--whiteColor);
+  border-radius: 10px;
+  object-fit: cover;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 2px 4px var(--inputColor);
+  margin-right: 1rem;
+}
+
+.titulo {
+  position: relative;
+}
+
+.titulo::before {
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+.titulo:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.titulo::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  inset: 0 0 0 0;
+  background: var(--HoverColor);
+  z-index: -1;
+  transition: transform .3s ease;
+}
+
+@media (orientation: landscape) {
+  body {
+    grid-auto-flow: column;
+  }
+}

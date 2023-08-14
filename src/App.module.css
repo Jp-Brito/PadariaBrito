@@ -1,0 +1,10 @@
+.container {
+  /* max-width: 70rem; */
+  /* margin: 0; */
+  padding: 5px 1rem;
+
+  display: grid;
+  grid-template-columns: 256px 1fr;
+  gap: 0px 1.5rem;
+  /* align-items: flex-start; */
+}
