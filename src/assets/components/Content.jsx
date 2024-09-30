@@ -2,8 +2,22 @@
 import styles from './Content.module.css';
 import { ArrowRight, Heart } from "@phosphor-icons/react";
 import { data, datalog } from '../utils/data.js'
+import { Component } from 'react';
 
 export function Content() {
+
+  class DynamicImage extends Component {
+    render() {
+      return <img src={'src/assets/imgs/' +this.props.name.img} alt={this.props.name.img} />;
+    }
+  }
+
+  class DynamicImageP extends Component {
+    render() {
+      return <img src={'src/assets/imgs/profile' +this.props.name.img + '.jpg'} alt={this.props.name.img + '.jpg'} />;
+    }
+  }
+  
   return (
     <div className={styles.Content}>
 
@@ -21,7 +35,7 @@ export function Content() {
             data.map((value) => (
               <div key={value.nome} className={styles.item}>
                 <Heart size={20} className={styles.icon} />
-                <img src={'./assets/imgs/' + value.img} alt="" />
+                <DynamicImage name={value}/>
                 <h3>{value.nome}</h3>
               </div>
             ))}
@@ -41,7 +55,7 @@ export function Content() {
           {datalog.length &&
             datalog.map((value) => (
               <div key={value.nome} className={styles.logActivity}>
-                <img src={'./assets/imgs/profile' + value.img + '.jpg'} alt="" />
+                <DynamicImageP name={value}/>
                 <div>
                   <span>{value.nome}</span>
                   <small>{value.status}</small>
