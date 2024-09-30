@@ -21,7 +21,7 @@ export function Content() {
             data.map((value) => (
               <div key={value.nome} className={styles.item}>
                 <Heart size={20} className={styles.icon} />
-                <img src={'src/assets/imgs/' + value.img} alt="" />
+                <img src={'./assets/imgs/' + value.img} alt="" />
                 <h3>{value.nome}</h3>
               </div>
             ))}
@@ -41,7 +41,7 @@ export function Content() {
           {datalog.length &&
             datalog.map((value) => (
               <div key={value.nome} className={styles.logActivity}>
-                <img src={'src/assets/imgs/profile' + value.img + '.jpg'} alt="" />
+                <img src={'./assets/imgs/profile' + value.img + '.jpg'} alt="" />
                 <div>
                   <span>{value.nome}</span>
                   <small>{value.status}</small>
