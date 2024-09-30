@@ -1,8 +1,8 @@
 /* eslint-disable react/jsx-key */
+import { Component } from 'react';
 import styles from './Content.module.css';
 import { ArrowRight, Heart } from "@phosphor-icons/react";
 import { data, datalog } from '../utils/data.js'
-import { Component } from 'react';
 
 export function Content() {
 
@@ -17,7 +17,7 @@ export function Content() {
       return <img src={'src/assets/imgs/profile' +this.props.name.img + '.jpg'} alt={this.props.name.img + '.jpg'} />;
     }
   }
-  
+
   return (
     <div className={styles.Content}>
 
@@ -33,6 +33,7 @@ export function Content() {
         <div className={styles.listitem}>
           {data.length &&
             data.map((value) => (
+              
               <div key={value.nome} className={styles.item}>
                 <Heart size={20} className={styles.icon} />
                 <DynamicImage name={value}/>
