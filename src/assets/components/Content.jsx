@@ -8,13 +8,13 @@ export function Content() {
 
   class DynamicImage extends Component {
     render() {
-      return <img src={this.props.name.img} alt={this.props.name.img} />;
+      return <img src={'./' +this.props.name.img} alt={this.props.name.img} />;
     }
   }
 
   class DynamicImageP extends Component {
     render() {
-      return <img src={'profile' +this.props.name.img + '.jpg'} alt={this.props.name.img + '.jpg'} />;
+      return <img src={'./profile' +this.props.name.img + '.jpg'} alt={this.props.name.img + '.jpg'} />;
     }
   }
 
